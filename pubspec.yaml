@@ -1,20 +1,24 @@
-name: borc_360
-description: Offline personal debt, repayments and installment planning.
+name: uyg_borc_takibi
+description: "Borç Takibi – Finans ve Hesaplama uygulaması (studio_core/apps + finans_motoru)."
 publish_to: none
-version: 1.0.0+1
+version: 2.0.0
+
 environment:
-  sdk: '>=3.5.0 <4.0.0'
+  sdk: ">=3.6.0 <4.0.0"
+
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  intl: ^0.20.2
-  flutter_secure_storage: ^9.2.4
-  share_plus: ^10.1.4
+  studio_core:
+    git:
+      url: https://github.com/taktemurr-ops/studio-core
+      ref: 92b51dd7d47c300d3611c448b5474fca5f793f2a
+  finans_motoru:
+    git:
+      url: https://github.com/taktemurr-ops/finans-motoru
+      ref: main
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
-flutter:
-  uses-material-design: true
+  flutter_lints: ^5.0.0

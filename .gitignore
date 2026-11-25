@@ -1,11 +1,6 @@
 .dart_tool/
-.packages
-.pub/
 build/
-.flutter-plugins*
-.metadata
-android/local.properties
-*.jks
-*.keystore
-*.env
-.DS_Store
+.packages
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies

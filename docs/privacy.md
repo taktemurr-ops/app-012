@@ -1,2 +1,0 @@
-# Privacy and safety
-Debt records are stored in flutter_secure_storage on-device. No remote accounts, analytics, trackers or third-party financial APIs are configured. Users can export JSON as plain text; the destination is outside this application's protection. Imports replace all local records after schema validation and atomic storage. Deleting all data clears the application's encrypted record. Uninstall/backup semantics depend on OS. The interest planner is illustrative only and not professional financial advice.

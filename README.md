@@ -1,22 +1,14 @@
-# APP-012 Borç 360 / Debt 360
+# Borç Takibi · Debt Tracker
 
-Offline-first Flutter Android/iOS debt manager. Debt and receivable accounts, partial payments, payment history/undo, due dates, overdue dashboard, per-currency totals, fixed-rate installment estimator, encrypted local storage, full deletion and JSON backup import/export. Turkish, English and Arabic interfaces with RTL.
+Borçlar, alacaklar ve ödemeler · What you owe, what you're owed, payments
 
-## Data model and limits
-- Amounts are signed 64-bit integer minor units, never binary floating point for balances.
-- Debt principal is never negative; repayments cannot exceed outstanding principal.
-- Currency totals are deliberately **not** added across currencies without an FX rate.
-- The installment planner is an estimate, not a bank quotation, and excludes fees and day-count interest.
-- JSON backup is plain text **outside** encrypted storage. Users must safeguard shared backups.
+Finans ve Hesaplama ailesinin uygulaması. Çevrimdışı çalışır; telefon, tablet ve web.
+Gerçek uygulama ortak motordadır: [finans-motoru](https://github.com/taktemurr-ops/finans-motoru); çatı ve
+reklam/satın alma/gizlilik: [studio-core](https://github.com/taktemurr-ops/studio-core) (`lib/apps`).
+Merkez uygulama: [merkez-finans-ve-hesaplama](https://github.com/taktemurr-ops/merkez-finans-ve-hesaplama).
 
-## Run
-```sh
-flutter create --platforms=android,ios --project-name borc_360 .
-flutter pub get
-flutter analyze
-flutter test
-flutter build apk --debug
-```
+Uygulama **kredi sunmaz**; yalnızca hesaplama yapar ve kayıt tutar. Veriler yalnızca cihazda saklanır.
 
-## Release gate
-Not production-approved until Flutter tests, Android/iOS builds, accessibility, encryption on real devices, privacy review, and signing are verified. No live banking, payment processing, ads or IAP are claimed.
+> Bu depo önceden bağımsız bir uygulamaydı (`app-012`). Finans ve Hesaplama çatısına taşındı; eski
+> sürümün kodu git geçmişinde duruyor. Özellikleri motora aktarıldı (borç/alacak, son tarih, kısmi ödemeler, gecikme uyarısı, CSV).
+> GitHub'da depo adı `uyg-borc-takibi` olarak değiştirilebilir (eski adresler yönlendirilir).
